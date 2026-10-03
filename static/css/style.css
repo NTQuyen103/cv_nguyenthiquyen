@@ -1,0 +1,111 @@
+/* ===== MÀU SẮC & FONT: chỉnh tại đây để đổi giao diện toàn trang ===== */
+:root{
+  --bg:#f5f6fa; --surface:#fff; --ink:#14192b; --muted:#5b6275; --line:#e2e5ef;
+  --primary:#3b4cff;      /* màu chủ đạo */
+  --accent:#00b894;       /* màu nhấn (thanh kỹ năng) */
+  --side:#10162f;         /* nền cột hồ sơ */
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Be Vietnam Pro',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--primary);outline-offset:3px}
+
+/* ===== BỐ CỤC: 2 cột trên desktop, 1 cột trên mobile ===== */
+.layout{display:grid;grid-template-columns:340px 1fr;min-height:100vh}
+.profile{background:var(--side);color:#e8ebf7;padding:48px 32px;position:sticky;top:0;height:100vh;overflow:auto}
+.content{padding:32px clamp(20px,5vw,72px) 48px;max-width:900px}
+
+/* ===== HỒ SƠ ===== */
+.avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;border:4px solid rgba(255,255,255,.15);display:block;margin-bottom:20px}
+.profile h1{font-size:1.7rem;font-weight:800;line-height:1.2}
+.job{color:#9fb0ff;font-weight:600;margin-top:4px}
+.slogan{color:#b5bad0;font-style:italic;margin:12px 0 24px}
+.info{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:.92rem;padding:20px 0;border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}
+.info dt{color:#98a0bd}.info dd{word-break:break-word}
+.actions{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+
+/* ===== NÚT: hiệu ứng hover nổi bật ===== */
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font:inherit;font-weight:700;transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn:active{transform:translateY(0)}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{box-shadow:0 10px 24px rgba(59,76,255,.45)}
+.btn-outline{border-color:#9fb0ff;color:#fff}
+.btn-outline:hover{background:#fff;color:var(--side);border-color:#fff}
+
+/* ===== MENU ===== */
+.nav{display:flex;gap:6px;flex-wrap:wrap;position:sticky;top:0;background:var(--bg);padding:12px 0;z-index:5;border-bottom:1px solid var(--line)}
+.nav a{padding:6px 14px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.9rem;color:var(--muted);transition:background .2s,color .2s}
+.nav a:hover{background:var(--primary);color:#fff}
+
+/* ===== MỤC NỘI DUNG ===== */
+section{padding:44px 0 8px;scroll-margin-top:60px}
+h2{font-size:1.5rem;font-weight:800;margin-bottom:20px}
+h3{font-size:1.05rem;font-weight:700}
+
+/* Kỹ năng */
+.skills{list-style:none;display:grid;gap:18px}
+.skill-head{display:flex;justify-content:space-between;font-weight:600;margin-bottom:6px}
+.bar{height:10px;background:var(--line);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--primary),var(--accent));border-radius:99px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+
+/* Kinh nghiệm & học vấn: đường dọc = trình tự thời gian */
+.timeline{border-left:3px solid var(--line);padding-left:24px;display:grid;gap:28px}
+.item{position:relative}
+.item::before{content:"";position:absolute;left:-33px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--primary);border:3px solid var(--bg)}
+.time{font-size:.85rem;font-weight:600;color:var(--primary)}
+.org{color:var(--muted);font-weight:500}
+
+/* Dự án */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:10px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(20,25,43,.1)}
+.card p{color:var(--muted);flex:1}
+.links{display:flex;gap:16px}
+.links a{font-weight:700;color:var(--primary);text-decoration:none}
+.links a:hover{text-decoration:underline}
+
+/* Form liên hệ */
+form{display:grid;gap:16px;max-width:520px}
+label{display:grid;gap:6px;font-weight:600;font-size:.92rem}
+input,textarea{font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);transition:border-color .2s,box-shadow .2s}
+input:focus,textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(59,76,255,.18)}
+form .btn{justify-self:start}
+#form-msg{font-size:.9rem;min-height:1.4em}
+.social{display:flex;gap:20px;flex-wrap:wrap;margin-top:24px;font-weight:700}
+.social a{color:var(--primary);text-decoration:none}.social a:hover{text-decoration:underline}
+footer{margin-top:56px;color:var(--muted);font-size:.85rem}
+
+/* ===== RESPONSIVE: tablet & mobile ===== */
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .profile{position:static;height:auto;padding:36px 24px}
+  .nav{overflow-x:auto;flex-wrap:nowrap}
+  .nav a{white-space:nowrap}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+a.inline{color:var(--primary);font-weight:600}
+/* ===== TRANG KẾT QUẢ HỌC TẬP (ketqua.html) ===== */
+.page{max-width:900px;margin:0 auto;padding:32px clamp(20px,5vw,48px) 56px}
+.back{font-weight:600;color:var(--primary);text-decoration:none}
+.page h1{font-size:1.9rem;font-weight:800;margin:16px 0 4px}
+.page .sub{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:28px 0}
+.stat{background:var(--side);color:#fff;border-radius:var(--radius);padding:18px}
+.stat b{display:block;font-size:1.8rem;line-height:1.2}.stat span{color:#b5bad0;font-size:.85rem}
+.chart{display:flex;align-items:flex-end;gap:12px;height:200px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 16px 12px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;font-size:.78rem;text-align:center;gap:4px}
+.col i{display:block;width:100%;max-width:56px;background:linear-gradient(var(--primary),var(--accent));border-radius:8px 8px 0 0}
+details{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);margin-top:14px;padding:0 18px}
+summary{cursor:pointer;padding:16px 0;font-weight:700;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+summary small{font-weight:500;color:var(--muted)}
+.tbl{overflow-x:auto;padding-bottom:12px}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th,td{padding:8px 6px;border-top:1px solid var(--line);text-align:left}
+th{color:var(--muted);font-weight:600}
+td:nth-child(n+2){text-align:center}th:nth-child(n+2){text-align:center}
+.g{display:inline-block;min-width:34px;padding:2px 8px;border-radius:99px;font-weight:700;background:#e8ebf7}
+.g.A{background:#d6f5ea;color:#007a5e}.g.B{background:#e0e6ff;color:#2b38c4}

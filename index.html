@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TODO: đổi tên và mô tả của bạn -->
+  <title>Nguyễn Thị Quyên – Business Analyst</title>
+  <meta name="description" content="CV cá nhân của Nguyễn Thị Quyên, Business Analyst.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+<div class="layout">
+
+  <!-- ===== CỘT TRÁI: HỒ SƠ (header + thông tin cá nhân) ===== -->
+  <aside class="profile">
+    <!-- TODO: thay ảnh bằng ảnh của bạn: đặt file vào static/img/avatar.jpg rồi sửa src bên dưới -->
+    <img class="avatar" src="static/img/qii.jpg" alt="Ảnh đại diện">
+    <h1>Nguyễn Thị Quyên</h1>
+    <p class="job">Business Analyst</p>
+    <p class="slogan">“Mỗi ngày là một cơ hội mới”</p>
+
+    <!-- Thông tin cá nhân: sửa nội dung trong <dd> -->
+    <dl class="info">
+      <dt>Ngày sinh</dt><dd>10/03/2005</dd>
+      <dt>Email</dt><dd>nguyenthiquyen7c@gmail.com</dd>
+      <dt>Điện thoại</dt><dd>0384659339</dd>
+      <dt>Địa chỉ</dt><dd>TDP Tam Á, P. Thuận Thành, TP. Bắc Ninh</dd>
+    </dl>
+
+    <!-- Nút hành động. TODO: đặt file PDF của bạn vào static/cv.pdf -->
+    <div class="actions">
+      <a class="btn btn-primary" href="static/cv.pdf" download>Tải CV</a>
+      <a class="btn btn-outline" href="#contact">Liên hệ</a>
+    </div>
+  </aside>
+
+  <!-- ===== CỘT PHẢI: NỘI DUNG ===== -->
+  <main class="content">
+
+    <!-- Menu: cuộn mượt tới từng mục -->
+    <nav class="nav" aria-label="Điều hướng">
+      <a href="#about">Giới thiệu</a><a href="#skills">Kỹ năng</a><a href="#experience">Kinh nghiệm</a>
+      <a href="#education">Học vấn</a><a href="#projects">Dự án</a><a href="#contact">Liên hệ</a><a href="ketqua.html">Kết quả học tập</a>
+    </nav>
+
+    <section id="about">
+      <h2>Giới thiệu</h2>
+      <p>Sinh viên năm 4 chuyên ngành Hệ thống thương mại điện tử, Trường Đại học Điện lực (GPA 3,42/4 – Giỏi). Hiện làm Business Analyst tại Tinasoft Việt Nam, phụ trách viết tài liệu đặc tả yêu cầu (SRS), tài liệu CMS và lập dự toán cho dự án. Có nền tảng về phân tích thiết kế hệ thống, cơ sở dữ liệu, lập trình web và AI.</p>
+    </section>
+
+    <!-- KỸ NĂNG: data-level là phần trăm (0–100). Thêm/xóa thẻ <li> tùy ý -->
+    <section id="skills">
+      <h2>Kỹ năng</h2>
+      <ul class="skills">
+        <li><div class="skill-head"><span>Viết tài liệu SRS, HDSD</span><span>80%</span></div><div class="bar"><i data-level="80"></i></div></li>
+        <li><div class="skill-head"><span>Phân tích thiết kế hệ thống (UML, Use case)</span><span>80%</span></div><div class="bar"><i data-level="80"></i></div></li>
+        <li><div class="skill-head"><span>Mô hình hóa: Draw.io, BPMN</span><span>65%</span></div><div class="bar"><i data-level="65"></i></div></li>
+        <li><div class="skill-head"><span>Wireframe: Figma, Visily</span><span>70%</span></div><div class="bar"><i data-level="70"></i></div></li>
+        <li><div class="skill-head"><span>Ước lượng, lập dự toán dự án</span><span>65%</span></div><div class="bar"><i data-level="65"></i></div></li>
+        <li><div class="skill-head"><span>Agile/Scrum, SDLC</span><span>65%</span></div><div class="bar"><i data-level="65"></i></div></li>
+      </ul>
+    </section>
+
+    <!-- KINH NGHIỆM: sao chép nguyên khối <article class="item"> để thêm mục mới -->
+    <section id="experience">
+      <h2>Kinh nghiệm làm việc</h2>
+      <div class="timeline">
+        <article class="item">
+          <span class="time">06/2026 – Hiện tại</span>
+          <h3>Business Analyst (Thực tập sinh)</h3>
+          <p class="org">Tinasoft Việt Nam</p>
+          <p>Viết tài liệu đặc tả yêu cầu phần mềm (SRS) và tài liệu CMS cho các module được phân công. Lập dự toán cho dự án. Làm việc với các bên liên quan để làm rõ yêu cầu nghiệp vụ.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- HỌC VẤN -->
+    <section id="education">
+      <h2>Học vấn</h2>
+      <div class="timeline">
+        <article class="item">
+          <span class="time">2023 – 2028</span>
+          <h3>Trường Đại học Điện lực</h3>
+          <p class="org">Chuyên ngành Hệ thống thương mại điện tử</p>
+          <p>Điểm trung bình tích lũy 8,24/10 (3,42/4) – Xếp loại Giỏi; hai học kỳ gần nhất đạt loại Xuất sắc. <a class="inline" href="ketqua.html">Xem kết quả học tập chi tiết</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- DỰ ÁN: thay href="#" bằng link thật; xóa thẻ <a> nếu không có -->
+    <section id="projects">
+      <h2>Dự án</h2>
+      <div class="projects">
+        <article class="card">
+          <h3>NCKH cấp trường: Phần mềm web TMĐT an toàn</h3>
+          <p>Nghiên cứu phát triển phần mềm web thương mại điện tử an toàn, cung cấp dịch vụ quản lý tài khoản và các chính sách giảm giá sản phẩm.</p>
+        </article>
+        <article class="card">
+          <h3>NCKH cấp trường: RabbitMQ kết hợp AI</h3>
+          <p>Nghiên cứu nền tảng quản lý thông điệp RabbitMQ kết hợp AI, ứng dụng thử nghiệm trong hệ thống tạo sinh và quản lý ngân hàng đề thi trắc nghiệm cho học sinh.</p>
+        </article>
+        <article class="card">
+          <h3>Dự án môn học (cá nhân)</h3>
+          <p>Website do mình tự thực hiện toàn bộ trong môn học.</p>
+          <div class="links"><a href="https://games-qiqi.vercel.app/" target="_blank" rel="noopener">Demo</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- LIÊN HỆ -->
+    <section id="contact">
+      <h2>Liên hệ</h2>
+      <!-- Form mở ứng dụng email của người xem. Muốn gửi thật: dùng dịch vụ như Formspree (xem main.js) -->
+      <form id="contact-form" novalidate>
+        <label>Họ tên<input name="name" required placeholder="Nguyễn Văn A"></label>
+        <label>Email<input name="email" type="email" required placeholder="ban@example.com"></label>
+        <label>Nội dung<textarea name="message" rows="4" required placeholder="Bạn muốn trao đổi điều gì?"></textarea></label>
+        <button class="btn btn-primary" type="submit">Gửi tin nhắn</button>
+        <p id="form-msg" role="status"></p>
+      </form>
+      <!-- Mạng xã hội: thay href bằng link của bạn -->
+      <p class="social"><a href="mailto:nguyenthiquyen7c@gmail.com">nguyenthiquyen7c@gmail.com</a><a href="https://www.facebook.com/share/1Dw8ozmCEn/" target="_blank" rel="noopener">Facebook</a></p>
+    </section>
+
+    <footer>© <span id="year"></span> Nguyễn Thị Quyên</footer>
+  </main>
+</div>
+<script src="static/js/main.js"></script>
+</body>
+</html>
